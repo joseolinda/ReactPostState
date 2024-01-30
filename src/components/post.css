@@ -1,5 +1,5 @@
 .post {
-    padding: 10px;
+    padding: 10px 20px;
     margin: 10px;
     background-color: #fff;
     border-radius: 5px;
@@ -9,6 +9,7 @@
     max-width: 300px;
     position: relative;
     float: left;
+    font-family: 'Roboto', sans-serif;
 }
 
 .post .header {
@@ -17,6 +18,12 @@
     padding: 8px 0;
     border-bottom: 1px solid #ddd;
     color: #333;
+}
+
+.post img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .post .content {

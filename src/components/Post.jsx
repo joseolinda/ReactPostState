@@ -24,7 +24,7 @@ function Post({ titulo, imagem, conteudo }) {
             <div className='curtidas'>
                 <span>{likes} curtidas</span>
                 { isLiked ? (
-                    <FaHeart onClick={handleLike} />
+                    <FaHeart fill='#f09' onClick={handleLike} />
                 ): (
                     <FaRegHeart onClick={handleLike} />
                 )}
