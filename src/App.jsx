@@ -1,6 +1,7 @@
 import Post from "./components/Post";
 
 import { useState } from "react";
+import { FaPlus } from "react-icons/fa";
 
 function App() {
   const [postagens, setPostagens] = useState([
@@ -24,6 +25,17 @@ function App() {
     }
   ])
 
+  const novoPost = {
+    id:Math.random * 100,
+    titulo: "Lorem Ipsun",
+    imagem:"https://picsum.photos/200/200?random=" + (Math.random() * 10),
+    conteudo:"Lorem Ipsun."
+  }
+
+  function addNovoPost() {
+    setPostagens([...postagens, novoPost])
+  }
+
   function apagarPost(postId) {
     setPostagens(postagens.filter(p => p.id !== postId))
   }
@@ -31,6 +43,7 @@ function App() {
   return (
     <div>
       <h1>React Blog</h1>
+      <FaPlus onClick={addNovoPost} />
       <p>Postagens do blog</p>
       {postagens.map(p => (
         <Post 
